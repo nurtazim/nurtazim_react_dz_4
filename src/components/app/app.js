@@ -88,18 +88,12 @@ class App extends React.Component {
         }
     }
 
-    onTodosFilterDone = (todos) => {
-        return todos.filter((item) => item.done === true)
-    }
-    onTodosFilterMore = (todos) => {
-        return todos.filter((item) => item.done === false)
-    }
 
 
     render() {
         const filteredTodos = this.onStatusFilter(this.state.todos, this.state.filter)
-        const done = Object.keys(this.onTodosFilterDone(this.state.todos)).length
-        const more = Object.keys(this.onTodosFilterMore(this.state.todos)).length
+        const done=Object.keys(this.state.todos.filter((item)=>item.done===true)).length
+        const more=Object.keys(this.state.todos.filter((item)=>item.done===false)).length
 
         return (
 
