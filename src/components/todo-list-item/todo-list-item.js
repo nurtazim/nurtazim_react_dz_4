@@ -7,7 +7,7 @@ const TodoListItem = ({onDone ,onDelete, onToggleImportant, id, label,done, impo
     const style = {
         color: important ? 'steelblue' : 'black',
         fontWeight: important ? 'bold' : 'normal',
-        textDecoration: done? "line-through":"normal"
+        textDecoration: done? "line-through":"none"
             };
 
     return (
